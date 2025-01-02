@@ -53,6 +53,7 @@
             .catch(error => console.error('Error checking alert status:', error));
     }
 
-    // setInterval(checkAlertStatus, 5000);
+    setInterval(checkAlertStatus, 5000);
+
 </script>
 @endsection
