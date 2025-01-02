@@ -8,7 +8,7 @@
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     @vite('resources/css/app.css')
 </head>
-<body class="flex flex-col min-h-screen bg-gray-100">
+<body class="flex flex-col h-screen bg-gray-100 {{ $allow_scroll ?? 'overflow-hidden' }}">
     <!-- Navbar -->
     <nav class="bg-white text-gray-900 py-4">
         <div class="container mx-auto">
@@ -34,8 +34,8 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow container mx-auto py-8 flex flex-col">
-      @yield('content')
+    <main class="flex-grow container mx-auto py-8 flex flex-col {{ $allow_scroll ?? 'overflow-hidden' }}">
+        @yield('content')
     </main>
 
     <!-- Footer -->
@@ -52,6 +52,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
